@@ -15,7 +15,7 @@ Los prerrequisitos que manejaremos para lograr con exito el desarrollo del labor
 se debe clonar el proyecto con el siguiente comando:
 
 ```
-git clone https://github.com/memo1019/miprimera-app
+git clone https://github.com/memo1019/PARCIAL1-AREP
 ```
 luego ingresaremos a la carpeta dede el cmd o la consola:
 ```
@@ -39,7 +39,7 @@ Para correr el programa tenemos que ejecutar el siguiente comando :
 ```
 java -cp target/classes;target/dependency/* edu.escuelaing.arep.app.App
 ```
-Luego vaya a http://localhost:4567/clima?lugar="la iudad que desea ver" para ver el programa desplegado localmente
+Luego vaya a http:// localhost:4567/clima?lugar="la ciudad que desea ver" para ver el programa desplegado localmente
 
 Ponga sus casos de prueba (recibira el json de la aplicacion de cada ciudad).
 
