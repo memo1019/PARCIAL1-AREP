@@ -47,7 +47,7 @@ La aplicación se despliega con heroku y el enlace está en la parte inferior de
 
 ## Diseño
 
-![Diagrama de Clases](/src/resources/diagrama.png)
+![Diagrama](/src/Resources/diagrama.png)
 
 ## Documentacion
 para realizar la documentacion de javadoc use estos comandos y aqui podra llevar acabo el proceso de creacion de esta documentacion.
