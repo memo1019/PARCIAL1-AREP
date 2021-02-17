@@ -1,6 +1,6 @@
-# AREP LABORATORIO 2 - INTRODUCCIÓN AL DISEÑO DE SISTEMAS INFORMÁTICOS
+# PARCIAL 1 - TALLER DE VERIFICACIÓN DE CONOCIMIENTOS TÉCNICOS 
 
-se realizo el taller propuesto de "INTRODUCCIÓN AL DISEÑO DE SISTEMAS INFORMÁTICOS" con ayuda del lavoratorio anteriormente realizado "Introducción a los sistemas complejos, JAVA,MVN y GIT" utilizando listas enlazadas
+se realizo el parcial propuesto de "TALLER DE VERIFICACIÓN DE CONOCIMIENTOS TÉCNICOS " con despliegue y uso en heroku 
 
 ### PREREQUISITOS
 
@@ -19,7 +19,7 @@ git clone https://github.com/memo1019/miprimera-app
 ```
 luego ingresaremos a la carpeta dede el cmd o la consola:
 ```
-cd /Lab02-AREP
+cd /PARCIAL1-AREP
 ```
 Finalmente coonstruiremos y compilaremos el proyecto para asi poder ejecutarlo.
 ```
@@ -37,11 +37,11 @@ las podra ver corriendo con el comando
 Para correr el programa tenemos que ejecutar el siguiente comando :
 
 ```
-java -cp target/classes;target/dependency/* edu.escuelaing.arep.Calculadora.SparkWeb.SparkWebApp
+java -cp target/classes;target/dependency/* edu.escuelaing.arep.app.App
 ```
-Luego vaya a http://localhost:4567/operacion para ver el programa desplegado localmente
+Luego vaya a http://localhost:4567/clima?lugar="la iudad que desea ver" para ver el programa desplegado localmente
 
-Ponga sus casos de prueba (Sólo recibirá números enteros y Float(.) separados por coma "," en otros casos el programa le mostrará y error de entrada en su navegador.
+Ponga sus casos de prueba (recibira el json de la aplicacion de cada ciudad).
 
 La aplicación se despliega con heroku y el enlace está en la parte inferior de este documento (botón Heroku)
 
@@ -66,7 +66,6 @@ si desea ver el javadoc se encuentra en el directorio
 /target/site
 ```
 
-Podemos ver la descripcion del proyecto en este pdf [file](/src/site/Resources/lab2.pdf) mostrando el diseño y la estructura del proyecto
 
 ## Construido con
 
@@ -75,8 +74,8 @@ Podemos ver la descripcion del proyecto en este pdf [file](/src/site/Resources/l
 * [Heroku](https://www.heroku.com)
 
 ## Despliegue en Heroku
-
-[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://blooming-mesa-19180.herokuapp.com/operacion)
+### Clima Bogota
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://peaceful-lowlands-99103.herokuapp.com/clima?lugar=cucuta)
 
 
 ## Autor
