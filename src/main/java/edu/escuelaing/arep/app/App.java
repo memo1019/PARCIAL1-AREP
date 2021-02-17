@@ -1,6 +1,10 @@
 package edu.escuelaing.arep.app;
 
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import org.apache.commons.io.FileUtils;
+
 import java.io.*;
 import java.net.*;
 
@@ -11,9 +15,9 @@ import static spark.Spark.*;
 
 public class App {
     /**
-     * Method that does the connection and takes data
-     * @param args
-     */
+     *Es la clase principal que llama la pagina web y pone a correr el servicio en esta pagina
+     * @param args argumentos para correr
+     * */
     public static void main (String[] args) {
         port (getPort());
         get("/clima", (req, res) -> {
@@ -25,8 +29,9 @@ public class App {
     }
     /**
      * Methos that reads url input
-     * @param agent
-     * @return
+     * @param agent es el agente del servicio que vamos a correr
+     * @param city es la ciudad que se nescesita para saber el clima
+     * @return String
      */
     public static String readURL(String city,String agent) throws IOException {
         String sitetoread = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=b334d625411f5b37adfabafe3783cafa";
@@ -52,7 +57,8 @@ public class App {
     }
     /**
      * Method that returns port service
-     * @return
+     * @return int obtiene el intero del puerto que se corre
+
      */
     public static int getPort() {
         if (System.getenv("PORT") != null)
