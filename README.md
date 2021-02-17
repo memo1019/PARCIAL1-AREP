@@ -32,6 +32,11 @@ las podra ver corriendo con el comando
  mvn test
 ```
 
+### prueba localhost
+
+
+![Prueba](/src/Resources/prueba.png)
+
 ## Correr
 
 Para correr el programa tenemos que ejecutar el siguiente comando :

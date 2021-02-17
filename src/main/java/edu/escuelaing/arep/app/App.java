@@ -34,22 +34,25 @@ public class App {
      * @return String
      */
     public static String readURL(String city,String agent) throws IOException {
-        String sitetoread = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=b334d625411f5b37adfabafe3783cafa";
+        String sitetoread = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=b334d625411f5b37adfabafe3783cafa";
         URL obj = new URL(sitetoread);
         HttpURLConnection conexion = (HttpURLConnection) obj.openConnection();
-        int  Respuesta= conexion.getResponseCode();
-        conexion.setRequestProperty("User-Agent", agent);
         conexion.setRequestMethod("GET");
-        if (Respuesta == HttpURLConnection.HTTP_OK) {
-            StringBuffer repuestaS = new StringBuffer();
-            String ingreso;
+        conexion.setRequestProperty("User-Agent", agent);
+
+        int Respuesta = conexion.getResponseCode();
+
+        if (Respuesta == HttpURLConnection.HTTP_OK) { // success
             BufferedReader in = new BufferedReader(new InputStreamReader(
                     conexion.getInputStream()));
+            String linea;
+            StringBuffer repuestaS = new StringBuffer();
 
-            while ((ingreso = in.readLine()) != null) {
-                repuestaS.append(ingreso);
+            while ((linea = in.readLine()) != null) {
+                repuestaS.append(linea);
             }
             in.close();
+
             return repuestaS.toString();
         } else {
             return null;
